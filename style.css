@@ -1,39 +1,44 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: linear-gradient(120deg, #161b2d 0%, #392780 100%);
+    background: linear-gradient(120deg, #203a74 0%, #2443a8 100%);
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 .cv-container {
     max-width: 700px;
-    background: rgba(22, 27, 45, 0.92);
+    background: rgba(25, 45, 90, 0.9);
     margin: 50px auto;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 32px #392780bb;
-    color: #dadfff;
+    box-shadow: 0 4px 32px #1787e6bb;
+    color: #e4eefd;
 }
 header h1 {
     font-family: 'Montserrat', Arial, sans-serif;
     letter-spacing: 2px;
     font-size: 3em;
-    color: #12ebea;
-    text-shadow: 0 0 10px #13a1a7cc;
+    color: #169cf3;
+    text-shadow: 0 0 16px #1787e6cc;
     margin-bottom: 4px;
 }
 header h2 {
-    color: #bb9df6;
+    color: #5eb3ff;
     font-weight: 400;
     margin-top: 6px;
     font-size: 1.5em;
-    text-shadow: 0 0 6px #39278099;
+    text-shadow: 0 0 10px #2443a8cc;
 }
 .contact {
     margin-bottom: 16px;
     font-size: 1.07em;
 }
 .skills h2 {
-    color: #7df4ed;
+    color: #40b4e6;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -43,19 +48,63 @@ header h2 {
     gap: 12px;
 }
 .skill-badges span {
-    background: linear-gradient(90deg, #2b94e9, #bb9df6);
-    color: #161b2d;
+    background: linear-gradient(90deg, #1787e6 40%, #5eb3ff 100%);
+    color: #2641a5;
     border-radius: 10px;
     padding: 6px 14px;
     font-weight: 700;
     font-family: 'Montserrat', Arial, sans-serif;
-    box-shadow: 0 2px 8px #bb9df6aa;
+    box-shadow: 0 2px 8px #40b4e6bb;
     font-size: 1em;
 }
-.exp h2, .edu h2 {
-    color: #bb9df6;
-    margin-top: 28px;
+.timeline-container {
+    position: relative;
+    margin-left: 18px;
+    padding-left: 24px;
+    border-left: 3px solid #169cf3;
 }
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(120deg, #5eb3ff 60%, #169cf3 100%);
+    border-radius: 50%;
+    margin-right: 14px;
+    box-shadow: 0 0 8px #169cf3aa;
+    position: absolute;
+    left: -24px;
+}
+
+.timeline-content {
+    background: rgba(30, 56, 105, 0.93);
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #e4eefd;
+    box-shadow: 0 1px 8px #1787e655;
+    min-width: 250px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #40b4e6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.company {
+    color: #5eb3ff;
+    margin-left: 6px;
+    font-style: italic;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -64,9 +113,99 @@ ul {
 li {
     margin-bottom: 8px;
 }
+
+.contact-accroche {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 24px;
+  background: rgba(30, 56, 105, 0.87);
+  border-radius: 16px;
+  box-shadow: 0 2px 14px #169cf399;
+  padding: 20px;
+}
+
+.contact-accroche a {
+  color: #5eb3ff;
+  text-decoration: underline;
+}
+
+.accroche p {
+  font-style: italic;
+  color: #e4eefd;
+  margin-top: 0;
+}
+
+.tool-badges, .lang-badges, .hobbies-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tool-badges span, .lang-badges span, .hobbies-badges span {
+  background: linear-gradient(90deg, #40b4e6 60%, #1787e6 100%);
+  color: #2641a5;
+  border-radius: 10px;
+  padding: 6px 16px;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 2px 8px #40b4e6bb;
+  font-size: 1em;
+}
+
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(120deg, #203a74 70%, #2443a8 100%);
+    box-shadow: 0 2px 12px #2443a877;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin-bottom: 18px;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.navbar ul li {
+    margin: 0 16px; 
+}
+.navbar a {
+    color: #e4eefd;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 18px 0 10px 0;
+    display: block;
+    transition: color 0.2s;
+}
+.navbar a:hover,
+.navbar a:focus {
+    color: #5eb3ff;
+}
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
 footer {
     margin-top: 38px;
     font-size: 1.1em;
     text-align: center;
-    color: #7df4ed;
+    color: #5eb3ff;
 }
+

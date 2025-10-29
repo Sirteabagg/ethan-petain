@@ -11,47 +11,137 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <
   </head>
   <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#exp">Expérience</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#hobbies">Centres d’intérêt</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <div class="cv-container">
-      <header>
+      <header id="accueil">
         <h1>Ethan Petain</h1>
         <h2>Ingénieur IA & Data Science</h2>
       </header>
-      <section class="contact">
-        <p>
-          Email : <strong>ethan.petain@gmail.com</strong> | Téléphone :
-          <strong>06 58 67 14 22</strong> | LinkedIn :
-          <a href="http://linkedin.com/in/ethan-petain"
-            >linkedin.com/in/ethan-petain</a
-          >
-        </p>
-      </section>
-      <section class="skills">
-        <h2>Compétences IA</h2>
-        <div class="skill-badges">
-          <span>Python</span><span>TensorFlow</span><span>PyTorch</span
-          ><span>Machine Learning</span><span>Deep Learning</span>
-          <span>Data Analysis</span><span>OpenCV</span>
+
+      <section class="contact-accroche" id="contact">
+        <div class="contact-info">
+          <p>
+            <strong>Email :</strong> ethan.petain@gmail.com<br />
+            <strong>Téléphone :</strong> 06 58 67 14 22<br />
+            <strong>LinkedIn :</strong>
+            <a href="http://linkedin.com/in/ethan-petain"
+              >linkedin.com/in/ethan-petain</a
+            >
+          </p>
+        </div>
+        <div class="accroche">
+          <p>
+            Mettre mes compétences en développement, mon intérêt pour l’IA et la
+            data au service de projets innovants, avec enthousiasme et esprit
+            d’initiative, pour aider votre entreprise à exploiter la donnée et
+            booster la performance !
+          </p>
         </div>
       </section>
-      <section class="exp">
-        <h2>Expérience</h2>
-        <ul>
-          <li>
-            <strong>2023-présent :</strong> Data Scientist - SmartAI Solutions
-          </li>
-          <li><strong>2021-2023 :</strong> R&D Deep Learning - StartupAI</li>
-        </ul>
+
+      <section class="skills-tools-langues" id="competences">
+        <h2>Compétences</h2>
+        <div class="skill-badges">
+          <span>Python</span>
+          <span>C</span>
+          <span>Java</span>
+          <span>SQL</span>
+          <span>Machine Learning</span>
+          <span>Deep Learning</span>
+          <span>Machne Learning</span>
+        </div>
+        <h2>Outils</h2>
+        <div class="tool-badges">
+          <span>Git</span>
+          <span>Clion</span>
+          <span>Pycharm</span>
+          <span>Kaggle</span>
+          <span>VS Code</span>
+          <span>MongoDB</span>
+        </div>
+        <h2>Langues</h2>
+        <div class="lang-badges">
+          <span>Français (natif)</span>
+          <span>Anglais (B2)</span>
+          <span>Allemand (A2)</span>
+          <span>Japonais (A1)</span>
+        </div>
       </section>
-      <section class="edu">
+
+      <section class="timeline" id="formation">
         <h2>Formation</h2>
-        <ul>
-          <li>2021 : Master DataScience & IA - Sorbonne Université</li>
-        </ul>
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022-Présent</span>
+              <strong>Ingénieur IA & Data</strong>
+              <span class="company">- ECE Paris</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Autonome 2024</span>
+              <strong>Semestre à l'international</strong>
+              <span class="company">- Baruch College New York</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline" id="exp">
+        <h2>Expérience</h2>
+        <div class="timeline-container">
+          <!-- Timeline expérience -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Janvier 2024</span>
+              <strong>Stage Dév Full-Stack</strong>
+              <span class="company">- Les Fabricants</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Fevrier 2025</span>
+              <strong>SII</strong>
+              <span class="company">- R&D Data Analyst & IA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobbies" id="hobbies">
+        <h2>Centres d’intérêt</h2>
+        <div class="hobbies-badges">
+          <span>Tennis de table</span>
+          <span>Sport automobile</span>
+          <span>Cyclisme</span>
+          <span>Mécanique</span>
+          <span>Management associatif</span>
+        </div>
       </section>
       <footer>
-        <p>Portfolio & Projets IA : <strong>github.com/jeandupont</strong></p>
+        <p>
+          Portfolio & Projets IA :
+          <a href="https://github.com/Sirteabagg/"
+            ><strong>https://github.com/Sirteabagg/</strong></a
+          >
+        </p>
       </footer>
     </div>
   </body>
