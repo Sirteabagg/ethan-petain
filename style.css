@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(120deg, #161b2d 0%, #392780 100%);
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.cv-container {
+    max-width: 700px;
+    background: rgba(22, 27, 45, 0.92);
+    margin: 50px auto;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 32px #392780bb;
+    color: #dadfff;
+}
+header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 3em;
+    color: #12ebea;
+    text-shadow: 0 0 10px #13a1a7cc;
+    margin-bottom: 4px;
+}
+header h2 {
+    color: #bb9df6;
+    font-weight: 400;
+    margin-top: 6px;
+    font-size: 1.5em;
+    text-shadow: 0 0 6px #39278099;
+}
+.contact {
+    margin-bottom: 16px;
+    font-size: 1.07em;
+}
+.skills h2 {
+    color: #7df4ed;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.skill-badges span {
+    background: linear-gradient(90deg, #2b94e9, #bb9df6);
+    color: #161b2d;
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 2px 8px #bb9df6aa;
+    font-size: 1em;
+}
+.exp h2, .edu h2 {
+    color: #bb9df6;
+    margin-top: 28px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.07em;
+}
+li {
+    margin-bottom: 8px;
+}
+footer {
+    margin-top: 38px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #7df4ed;
+}
