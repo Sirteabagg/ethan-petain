@@ -1,0 +1,80 @@
+:root{
+  --bg-deep:#0f1c3f;
+  --bg-indigo:#203a74;
+  --electric:#169cf3;
+  --cyan:#5eb3ff;
+  --text-main:#e4eefd;
+  --text-sub:#cfe5ff;
+  --card-border:rgba(255,255,255,0.08);
+}
+
+/* Global dark background to avoid any white gap */
+html,body{min-height:100%;background:var(--bg-deep)}
+
+/* Page + background */
+.page{
+  min-height:100dvh;
+  color:var(--text-main);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #2b4aa6 20%, transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, #1f3c87 10%, transparent 60%),
+    linear-gradient(120deg, var(--bg-indigo), var(--bg-deep));
+  position:relative;
+  overflow-x:clip;
+}
+.blob{position:absolute;width:20rem;height:20rem;border-radius:9999px;filter:blur(40px);opacity:.2;pointer-events:none;animation:float 6s ease-in-out alternate infinite}
+.blob.tl{top:-6rem;left:-6rem;background:var(--electric)}
+.blob.br{right:-6rem;bottom:-6rem;background:var(--cyan)}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+
+/* Layout */
+.container{max-width:1100px;margin:2.5rem auto;padding:0 1rem}
+.glass{background:rgba(255,255,255,0.06);border:1px solid var(--card-border);border-radius:24px;box-shadow:0 10px 40px rgba(23,135,230,0.25)}
+.section{padding:1.25rem;margin-bottom:2rem;border-radius:20px}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;width:100%;backdrop-filter:blur(10px);background:rgba(255,255,255,0.06);border-bottom:1px solid var(--card-border)}
+.navlist{display:flex;gap:1.25rem;justify-content:center;align-items:center;max-width:1200px;margin:0 auto;padding:.9rem 1rem;list-style:none;font-weight:700}
+.navlist a{color:var(--text-main);text-decoration:none;padding:2px 2px}
+.navlist a:hover{color:var(--cyan)}
+
+/* Hero */
+.hero{padding:2rem;margin-bottom:2rem}
+.h1{font-family:'Montserrat',system-ui,sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:-.5px;color:var(--electric);text-shadow:0 0 16px rgba(23,135,230,.8);margin:0}
+.h2{margin-top:.5rem;font-size:1.125rem;font-weight:400;color:var(--text-sub)}
+.p{margin-top:1rem;color:var(--text-main);opacity:.9;line-height:1.6}
+
+/* Titles */
+.section-title{color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin:0 0 .75rem 0;font-family:'Montserrat',system-ui,sans-serif;font-weight:700}
+
+/* Badges */
+.badges{display:flex;flex-wrap:wrap;gap:.6rem}
+.badge{background:linear-gradient(90deg,#1787e6 40%,#5eb3ff 100%);color:#2641a5;border-radius:10px;padding:6px 14px;font-weight:700;font-family:'Montserrat',system-ui,sans-serif;box-shadow:0 2px 8px rgba(64,180,230,.7);display:inline-block;transform:translateY(0);transition:transform .15s ease}
+.badge:hover{transform:translateY(-3px)}
+
+/* Timeline */
+.timeline{position:relative;margin-left:18px;padding-left:24px;border-left:4px solid var(--electric)}
+.dot{position:absolute;left:-10px;width:14px;height:14px;border-radius:9999px;background:linear-gradient(120deg,#5eb3ff 60%,#169cf3 100%);box-shadow:0 0 8px rgba(22,156,243,.66)}
+.item{margin-bottom:16px;position:relative}
+.item-card{padding:12px 16px;border-radius:12px}
+.date{display:block;margin-bottom:6px;color:var(--cyan);font-family:'Montserrat',system-ui,sans-serif;font-weight:700}
+.company{margin-left:6px;color:var(--cyan);font-style:italic}
+
+/* Carousel */
+.carousel-row{display:flex;gap:.75rem;align-items:stretch}
+.carousel-card{flex:1;min-height:220px;border-radius:18px;padding:20px;display:flex;align-items:center;justify-content:center}
+.navbtn{user-select:none;border:none;background:rgba(255,255,255,0.06);color:var(--text-main);padding:.5rem .75rem;border-radius:10px;font-size:20px;cursor:pointer;transition:background .2s ease}
+.navbtn:hover{background:rgba(255,255,255,0.1)}
+
+/* Footer */
+.footer{border-top:1px solid var(--card-border);padding-top:1rem;margin-bottom:2rem}
+.footer a{color:var(--cyan);font-weight:700}
+/* Avoid white strip below by removing extra bottom margin */
+.footer{margin-bottom:0}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .navlist{flex-wrap:wrap}
+  .carousel-row{gap:.5rem}
+  .hero{padding:1.25rem}
+}
